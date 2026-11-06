@@ -1,11 +1,11 @@
 ---
-name: openyida-patch
+name: openyida-plus
 description: "宜搭（Yida / 宜搭）开发必备 skill。只要任务涉及宜搭——包括但不限于自定义页面（oyd.jsx）、表单 API（saveFormData / updateFormData / searchFormDatas）、字段数据格式、发布、CLI 命令、CSS 适配、组件开发——就必须载入本 skill，不得跳过。"
 user-invocable: true
 argument-hint: [字段名或错误信息]
 ---
 
-# openyida-patch
+# openyida-plus
 
 通过 openyida CLI 或浏览器 `fetch` 调用宜搭数据 API（`saveFormData`、`updateFormData`、`searchFormDatas` 等）时，各字段类型的正确数据格式、常见陷阱与本机调试方法。
 
@@ -46,6 +46,10 @@ npx openyida publish pages/build/schedule-main.yida.jsx APP_WRJWKV4Q4LACDC0DYIJX
 ```
 
 只有当 `openyida publish` 返回 `"success": true` 时，任务才算完成。
+
+### 3. 自定义页面任务路由
+
+任务涉及 oyd.jsx 自定义页面的架构、shadcn/ui 设计语言、CSS/Tailwind 适配、组件实现或页面布局时，**必须读取 [references/custom-page/README.md](references/custom-page/README.md)**，并遵循该专题的约束与发布工作流；表单字段的数据格式仍以本 skill 的 `references/field-formats.md` 为准，发布仍须满足上文「完成标准」。
 
 ## 使用时机
 
